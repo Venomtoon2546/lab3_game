@@ -100,8 +100,11 @@ namespace lab3_game
             _spriteBatch.Draw(myTexture, new Vector2(364, 64 * 4), flower, Color.White);
             _spriteBatch.Draw(myTexture, new Vector2(64*7, 64*2), BigTree, Color.White);
 
-        
-            
+            for (int i = 0; i < 4; i++)
+            {
+                _spriteBatch.Draw(cloudTexture, cloudPos[i], null, Color.White, 0, Vector2.Zero, scaleClound[i], 0, 0);
+            }
+
             _spriteBatch.End();
             base.Draw(gameTime);
         }
